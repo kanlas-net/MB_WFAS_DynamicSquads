@@ -49754,7 +49754,11 @@ scripts = [
       (try_begin),
          (assign, ":max_team_1_agents", 0), #Local max_agents, this way we can change the g_max_team_1_agents for balance purposes
          (store_sub, ":max_team_1_agents", "$g_max_team_1_agents", "$g_total_team_1_players"),
-         (store_div, "$g_multiplayer_squad_size", ":max_team_1_agents", "$g_total_team_1_players"), #This determines final outcome for squad sizes
+         (try_begin),
+           (store_div, "$g_multiplayer_squad_size", ":max_team_1_agents", "$g_total_team_1_players"), #This determines final outcome for squad sizes
+         (else_try),
+           (assign, ":max_team_1_agents", 1), #Prevent division by zero if no players
+         (try_end),
          (get_max_players, ":num_players"),  #Broadcast to all players  
          (try_for_range, ":player_no", 1, ":num_players"), #0 is server so starting from 1
             (player_is_active, ":player_no"),
