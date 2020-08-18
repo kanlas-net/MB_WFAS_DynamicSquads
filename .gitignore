@@ -21,3 +21,10 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+
+# Python precompiled files and bak files
+*.pyc
+*.py.bak
+
+#Project build folder
+Build/*
