@@ -27,4 +27,4 @@ $RECYCLE.BIN/
 *.py.bak
 
 #Project build folder
-Build/*
+Build/

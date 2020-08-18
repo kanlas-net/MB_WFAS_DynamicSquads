@@ -4,6 +4,9 @@ import os
 
 print "Initializing..."
 
+if not os.path.exists(export_dir):
+    os.makedirs(export_dir)
+
 try:
   os.remove(export_dir + 'tag_uses.txt')
 except:
