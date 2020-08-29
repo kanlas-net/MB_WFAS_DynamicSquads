@@ -1,3 +1,21 @@
+# Download #
+
+Download latest release [here](https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/download/4.2.1/DynamicSquads.zip)
+
+# Installation #
+
+Replace files in the folder *Path_to_Dedicated_Server\Modules\Ogniem i Mieczem* with ones from archive
+
+# Build with Linux #
+
+Run `build_module.sh`, it will create file *.env* where you should set path to yout python2 binary. Then build project at any time by running `build_module.sh`
+
+# Daimyo21 instructions #
+
+More instructions can be found under spoiler
+<details>
+  <summary>Open spolier</summary>
+
 NOTE: The main files I've edited where the core of the mod works is module_scripts.py, module_mission_templates.py, module_scene_props.py. For custom maps its: module_scenes.py
 
 
@@ -38,4 +56,4 @@ Download my custom module here, extract in a separate directory, configure the m
 Download WFAS Custom Maps.zip and extract into C:\Mount&Blade With Fire and Sword Dedicated\Modules\Ogniem i Mieczem\SceneObj
 Place sample Sample_Captain_Coop.txt and Sample_Captain_Coop_start.bat in main dedicated server files directory. Configure Sample_Captain_Coop.txt and run the Sample_Captain_Coop_start.bat
 
-
+</details>
