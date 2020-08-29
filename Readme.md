@@ -34,7 +34,7 @@ If you specify another port in config file, change environment variable *PORT* b
 
 ### Known issues ###
 
-If you attach to container nothing happens or you can't interact with wine console. So if you need this feature, start a server as (systemd daemon)[https://github.com/kanlas-net/Mount_Blade_Systemd] instead of docker container.
+If you attach to container nothing happens or you can't interact with wine console. So if you need this feature, start a server as [systemd daemon](https://github.com/kanlas-net/Mount_Blade_Systemd) instead of docker container.
 
 # Daimyo21 instructions #
 
