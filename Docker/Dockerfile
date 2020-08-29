@@ -20,8 +20,6 @@ RUN wget https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/dow
     unzip -o DynamicSquads.zip -d /opt/wfas/Modules/Ogniem\ i\ Mieczem && \
     rm DynamicSquads.zip
 
-RUN apk add screen
-
 ENV TERM=xterm \
     WINEDEBUG=-all \
     DISPLAY=:0 \
