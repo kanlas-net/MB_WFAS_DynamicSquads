@@ -6,6 +6,12 @@ Download latest release [here](https://github.com/kanlas-net/MB_WFAS_DynamicSqua
 
 Replace files in the folder *Path_to_Dedicated_Server\Modules\Ogniem i Mieczem* with ones from archive
 
+# Build with Linux #
+
+Run `build_module.sh`, it will create file *.env* where you should set path to yout python2 binary
+
+Then build project at any time by running `build_module.sh`
+
 # Docker #
 
 To build:
@@ -29,12 +35,6 @@ If you specify another port in config file, change environment variable *PORT* b
 ### Known issues ###
 
 If you attach to container nothing happens or you can't interact with wine console. So if you need this feature, start a server as (systemd daemon)[https://github.com/kanlas-net/Mount_Blade_Systemd] instead of docker container.
-
-# Build with Linux #
-
-Run `build_module.sh`, it will create file *.env* where you should set path to yout python2 binary
-
-Then build project at any time by running `build_module.sh`
 
 # Daimyo21 instructions #
 
