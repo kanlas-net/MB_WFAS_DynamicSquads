@@ -29,8 +29,7 @@ docker run -d \
 -p 7240:7240 -p 7240:7240/udp \
 dynamicsquads
 ```
-`-v /path/to/logs/folder:/opt/wfas/Logs` part is optional. If not specified logs and banlist will be written inside the container. Don't forget to give write permissions for folder with `chmod 666 /path/to/logs/folder` or create a user/group with id *5885* and enough permissions
-If you specify another port in config file, change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly.
+`-v /path/to/logs/folder:/opt/wfas/Logs` part is optional. If not specified logs and banlist will be written inside the container. Don't forget to give write permissions for folder with `chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder`. Change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly.
 
 ### Known issues ###
 
