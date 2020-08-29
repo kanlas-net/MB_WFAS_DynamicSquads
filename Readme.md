@@ -21,15 +21,17 @@ docker build --tag dynamicsquads .
 ```
 To start:
 ```
+chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder #optional
 docker run -d \
 --restart=always \
 -v /path/to/config/name.txt:/opt/wfas/config.txt \
--v /path/to/logs/folder:/opt/wfas/Logs \
+-v /path/to/logs/folder:/opt/wfas/Logs \ #optional
 --name dynamicsquads \
 -p 7240:7240 -p 7240:7240/udp \
 dynamicsquads
 ```
-`-v /path/to/logs/folder:/opt/wfas/Logs` part is optional. If not specified logs and banlist will be written inside the container. Don't forget to give write permissions for folder with `chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder`. Change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly.
+IF `#optional` parts is not specified logs and banlist will be written inside the container.
+Change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change a container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly.
 
 ### Known issues ###
 
