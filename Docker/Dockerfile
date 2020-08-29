@@ -18,7 +18,7 @@ RUN apk update && \
 # Install DynamicSquads
 RUN wget https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/download/DynamicSquads.zip && \
     unzip -o DynamicSquads.zip -d /opt/wfas/Modules/Ogniem\ i\ Mieczem && \
-    rm DynamicSquads.zip
+    rm DynamicSquads.zip && \
     wget https://github.com/kanlas-net/MB_WFAS_DynamicSquads/raw/master/Server\ Related\ Files\ and\ Maps/WFAS\ Custom\ Maps.zip && \
     unzip -o WFAS\ Custom\ Maps.zip -d /opt/wfas/Modules/Ogniem\ i\ Mieczem/SceneObj && \
     rm WFAS\ Custom\ Maps.zip
