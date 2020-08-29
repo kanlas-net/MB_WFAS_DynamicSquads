@@ -8,7 +8,9 @@ Replace files in the folder *Path_to_Dedicated_Server\Modules\Ogniem i Mieczem* 
 
 # Build with Linux #
 
-Run `build_module.sh`, it will create file *.env* where you should set path to yout python2 binary. Then build project at any time by running `build_module.sh`
+Run `build_module.sh`, it will create file *.env* where you should set path to yout python2 binary
+
+Then build project at any time by running `build_module.sh`
 
 # Daimyo21 instructions #
 
