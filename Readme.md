@@ -26,7 +26,7 @@ docker run -d \
 -v /path/to/config/name.txt:/opt/wfas/config.txt \
 -v /path/to/logs/folder:/opt/wfas/Logs \
 --name dynamicsquads \
--p 7240:7240 \
+-p 7240:7240 -p 7240:7240/udp \
 dynamicsquads
 ```
 `-v /path/to/logs/folder:/opt/wfas/Logs` part is optional. If not specified logs and banlist will be written inside the container. Don't forget to give write permissions for folder with `chmod 666 /path/to/logs/folder` or create a user/group with id *5885* and enough permissions
