@@ -6,6 +6,30 @@ Download latest release [here](https://github.com/kanlas-net/MB_WFAS_DynamicSqua
 
 Replace files in the folder *Path_to_Dedicated_Server\Modules\Ogniem i Mieczem* with ones from archive
 
+# Docker #
+
+To build:
+```
+wget https://raw.githubusercontent.com/kanlas-net/MB_WFAS_DynamicSquads/master/Docker/Dockerfile
+docker build --tag dynamicsquads .
+```
+To start:
+```
+docker run -d \
+--restart=always \
+-v /path/to/config/name.txt:/opt/wfas/config.txt \
+-v /path/to/logs/folder:/opt/wfas/Logs \
+--name dynamicsquads \
+-p 7240:7240 \
+dynamicsquads
+```
+`-v /path/to/logs/folder:/opt/wfas/Logs` part is optional. If not specified logs and banlist will be written inside the container. Don't forget to give write permissions for folder with `chmod 666 /path/to/logs/folder` or create a user/group with id *5885* and enough permissions
+If you specify another port in config file, change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly.
+
+### Known issues ###
+
+If you attach to container nothing happens or you can't interact with wine console. So if you need this feature, start a server as (systemd daemon)[https://github.com/kanlas-net/Mount_Blade_Systemd] instead of docker container.
+
 # Build with Linux #
 
 Run `build_module.sh`, it will create file *.env* where you should set path to yout python2 binary
