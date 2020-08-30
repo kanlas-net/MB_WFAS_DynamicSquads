@@ -17,7 +17,7 @@ Then build project at any time by running `build_module.sh`
 Download latest and import:
 ```
 wget https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/download/DynamicSquads-container.tar
-docker load dynamicsquads.tar
+docker load -i DynamicSquads-container.tar
 ```
 
 Or build by yourself:
