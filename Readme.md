@@ -1,6 +1,6 @@
 # Download #
 
-Download latest release [here](https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/download/4.2.1/DynamicSquads.zip)
+Download latest release [here](https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/download/DynamicSquads.zip)
 
 # Installation #
 
@@ -14,11 +14,18 @@ Then build project at any time by running `build_module.sh`
 
 # Docker #
 
-To build:
+Download latest and import:
+```
+wget https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/download/DynamicSquads-container.tar
+docker load dynamicsquads.tar
+```
+
+Or build by yourself:
 ```
 wget https://raw.githubusercontent.com/kanlas-net/MB_WFAS_DynamicSquads/master/Docker/Dockerfile
 docker build --tag dynamicsquads .
 ```
+
 To start:
 ```
 chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder #optional
