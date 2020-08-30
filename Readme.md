@@ -42,7 +42,8 @@ Change environment variable *PORT* by adding `-e PORT=your_port` to container. B
 
 ### Known issues ###
 
-If you attach to container nothing happens or you can't interact with wine console. So if you need this feature, start a server as [systemd daemon](https://github.com/kanlas-net/Mount_Blade_Systemd) instead of docker container.
+* If you attach to container nothing happens or you can't interact with wine console. So if you need this feature, start a server as [systemd daemon](https://github.com/kanlas-net/Mount_Blade_Systemd) instead of docker container.
+* Healthcheck not working at most distros ¯\\\_\(ツ\)\_\/¯, I will fix it soon
 
 # Daimyo21 instructions #
 
