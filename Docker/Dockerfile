@@ -32,4 +32,4 @@ ENTRYPOINT wineconsole --backend=curses /opt/wfas/mb_wfas_dedicated.exe -r confi
 
 USER mbserver
 
-HEALTHCHECK --interval=10s --timeout=3s --retries=3 CMD curl -sS --http0.9 -X GET http://127.0.0.1:$$PORT || exit 1
+HEALTHCHECK --interval=10s --timeout=3s --retries=3 CMD curl -sS -X GET http://127.0.0.1:$$PORT || exit 1
