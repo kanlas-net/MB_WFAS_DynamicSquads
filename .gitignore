@@ -16,3 +16,4 @@ Build/
 
 #Archives
 *.zip
+!Server Related Files and Maps/*.zip

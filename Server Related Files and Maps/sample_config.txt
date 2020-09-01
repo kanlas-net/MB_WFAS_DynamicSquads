@@ -1,0 +1,100 @@
+#WARNING: Make sure that you change the capital values with proper ones.
+#uncomment the line below when you set a valid administrator password
+#if you have premium members, set a password for them, otherwise delete/comment out the line below
+#uncomment the line below when you set a valid private password
+#set_pass_private privatepass
+#set_pass testing
+set_server_name DynamicSquadsRevived
+set_welcome_message Welcome to DynamicSquadsRevived server!
+
+set_pass_admin admin_pass
+#if the bottleneck is your server's bandwidth, then make sure that you set a correct value for upload limit (was 100000000)
+set_upload_limit 100000000
+#Also you must use the Steam version of the dedicated server in order to use this option
+set_enable_valve_anti_cheat 0
+#set_mission (multiplayer_ccoop) mode
+set_mission multiplayer_ccoop
+#setting max players, first one is non-premium member limit, second one is premium member limit
+set_max_players 30 30
+set_num_bots_voteable 0
+set_ban_voteable 0
+
+allow_changing_mission 1
+set_add_to_game_servers_list
+allow_granades 1 #allow or not to buy a granades
+set_control_block_direction 2
+set_combat_speed 4
+set_factions_voteable 1
+set_friendly_fire 0
+set_melee_friendly_fire 0
+set_friendly_fire_damage_friend_ratio 0
+set_friendly_fire_damage_self_ratio 0
+#set_combat_gold_bonus 50
+set_starting_gold 400
+#set_round_gold_bonus 100
+set_maps_voteable 1
+set_map_time_limit 10
+set_round_max_seconds 45             # time in seconds before items are removed; set the same value in module.ini for mission_object_prune_time
+set_force_default_armor 1
+set_valid_vote_ratio 75
+
+#Plains maps
+#add_map custom_map_2
+#add_map custom_map_3
+#add_map custom_map_4
+#add_map custom_map_5
+
+set_map mp_fakriye_castle
+
+#After '#' written in-game names of maps, they support map changing polls  
+add_map mp_new_1 #Tatar Town
+add_map mp_new_2  #Fortified Town
+add_map mp_new_3 #Trenches
+add_map mp_polya #Fields
+add_map	mp_marketplace #Marketplace
+add_map mp_old_castle #Old Castle
+add_map mp_hutor #Steppe Farmstead
+add_map mp_hillroad #Hill Road
+add_map mp_swamp_delta #Swamp Delta
+add_map mp_arena #Arena
+add_map mp_forest_edge #Forest Skirt
+add_map mp_river_village #Village by The River
+add_map	mp_smolensk
+add_map mp_bohus_fortress
+add_map mp_fakriye_castle
+add_map mp_steppefort
+add_map mp_giants_path
+
+#You can use them if you like, I think they are crap
+#add_map mp_edge_of_hell
+#add_map mp_forest_road #Road in the forest
+#add_map mp_troy_invasion
+#add_map mp_crevasse
+#add_map mp_totalwar
+#add_map mp_edge
+#add_map mp_river_fortress
+#add_map mp_yasna
+#add_map mp_fortress
+
+#adding all kingdoms to both sides just to randomize all of them
+#adding less kingdoms will reduce the randomization set (used in set_randomize_factions command)
+#fac_kingdom_1|Polish Commonwealth
+#fac_kingdom_2|Muscovite Tsardom
+#fac_kingdom_3|Crimean Khanate
+#fac_kingdom_4|Kingdom of Sweden
+#fac_kingdom_5|Cossack Hetmanate
+
+add_factions fac_kingdom_1 fac_kingdom_1
+add_factions fac_kingdom_2 fac_kingdom_2
+add_factions fac_kingdom_3 fac_kingdom_3
+add_factions fac_kingdom_4 fac_kingdom_4
+add_factions fac_kingdom_5 fac_kingdom_5
+set_randomize_factions 1
+
+#if you are running more than one dedicated server on the same computer, you must give different ports to each of them
+set_port 7240
+#if you are running the Steam version of the dedicated server, this port must also be set, and same limitations of set_port apply for Steam port
+#set_steam_port 7241
+set_server_log_folder Logs
+set_server_ban_list_file Logs\ban_list.txt
+start
