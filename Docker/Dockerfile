@@ -31,5 +31,3 @@ ENV TERM=xterm \
 ENTRYPOINT wineconsole --backend=curses /opt/wfas/mb_wfas_dedicated.exe -r config.txt -m Ogniem i Mieczem
 
 USER mbserver
-
-HEALTHCHECK --interval=10s --timeout=3s --retries=3 CMD if [[ $(curl -s --connect-timeout 1 -X GET http://127.0.0.1:$$PORT) ]]; then exit 1; else exit 0; fi
