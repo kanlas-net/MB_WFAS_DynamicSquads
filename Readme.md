@@ -38,7 +38,7 @@ docker run -d \
 dynamicsquads
 ```
 `chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder` and `/path/to/logs/folder:/opt/wfas/Logs` are optional. If they are not specified logs and banlist will be written inside the container.
-Change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change a container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly.
+<!-- Change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change a container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly. -->
 
 ### Known issue ###
 
