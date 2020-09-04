@@ -29,7 +29,7 @@ docker build --tag dynamicsquads .
 To start:
 ```
 chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder
-docker run -d \
+docker run -itd \
 --restart=always \
 -v /path/to/config/name.txt:/opt/wfas/config.txt \
 -v /path/to/logs/folder:/opt/wfas/Logs \
@@ -40,9 +40,9 @@ dynamicsquads
 `chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder` and `/path/to/logs/folder:/opt/wfas/Logs` are optional. If they are not specified logs and banlist will be written inside the container.
 <!-- Change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change a container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly. -->
 
-### Known issue ###
+### You don't like docker? ###
 
-If you attach to container nothing happens or you can't interact with wine console. So if you need this feature, start a server as [systemd daemon](https://github.com/kanlas-net/Mount_Blade_Systemd) instead of docker container.
+Start a server as [systemd daemon](https://github.com/kanlas-net/Mount_Blade_Systemd).
 
 # Daimyo21 instructions #
 
