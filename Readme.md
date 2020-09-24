@@ -42,7 +42,7 @@ dynamicsquads
 
 ### You don't like docker? ###
 
-Start a server as [systemd daemon](https://github.com/kanlas-net/Mount_Blade_Systemd).
+Start a server as [systemd daemon](https://github.com/kanlas-net/MB_Systemd).
 
 # Daimyo21 instructions #
 
