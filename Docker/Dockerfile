@@ -25,8 +25,7 @@ RUN wget https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/dow
 
 ENV TERM=xterm \
     WINEDEBUG=-all \
-    DISPLAY=:0 \
-    PORT=7240
+    DISPLAY=:0
 
 ENTRYPOINT wineconsole --backend=curses /opt/wfas/mb_wfas_dedicated.exe -r config.txt -m Ogniem i Mieczem
 
