@@ -1,18 +1,7 @@
-# Download #
+# How to start as Docker image #
 
-Download latest release [here](https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/download/DynamicSquads.zip)
-
-# Installation #
-
-Replace files in the folder *Path_to_Dedicated_Server\Modules\Ogniem i Mieczem* with ones from archive
-
-# Build with Linux #
-
-Run `build_module.sh`, it will create file *.env* where you should set path to yout python2 binary
-
-Then build project at any time by running `build_module.sh`
-
-# Docker #
+<details>
+  <summary>Open guide</summary>
 
 Download latest from Docker Hub:
 ```
@@ -39,54 +28,32 @@ dynamicsquads
 `chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder` and `/path/to/logs/folder:/opt/wfas/Logs` are optional. If they are not specified logs and banlist will be written inside the container.
 <!-- Change environment variable *PORT* by adding `-e PORT=your_port` to container. Basically you don't need to change a container port, so if you want to use another one just change host port in mapping argument and use default port in game config. *PORT* variable is needed for healthcheck to work properly. -->
 
-### You don't like docker? ###
+</details>
 
-Start a server as [systemd daemon](https://github.com/kanlas-net/MB_Systemd).
+# How to start as Wine application #
 
-# Daimyo21 instructions #
-
-More instructions can be found under spoiler
 <details>
-  <summary>Open spolier</summary>
+  <summary>Open guide</summary>
+<br/>
+:warning: This method requires installed Wine for x86 package
 
-NOTE: The main files I've edited where the core of the mod works is module_scripts.py, module_mission_templates.py, module_scene_props.py. For custom maps its: module_scenes.py
+## Download and unpack ##
 
+Download latest release [here](https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/download/DynamicSquads.zip)
 
-Instructions:
-To host a dedicated server visit: https://forums.taleworlds.com/index.php?threads/hosting-a-dedicated-server-guide.113653/
+Replace files in the folder *Path_to_Dedicated_Server\Modules\Ogniem i Mieczem* with ones from the archive
 
-WFAS dedicaated server files found here: https://www.taleworlds.com/en/Games/FireAndSword
+## Or build with Linux from source ##
 
-Direct link to dedicated files: http://download.taleworlds.com/mb_wfas_dedicated_1143.zip
+Run `build_module.sh`, it will create file *.env* where you should set path to your python2 binary
 
-The dedicated server files are setup like your client game installation, the difference is you're configuring them. The config files you need for Captain coop can be found here: https://github.com/Daimyo21/Mount-Blade-WFAS-Dynamic-Squads-CaptainCoop-Server-Side-Mod/tree/master/Server%20Related%20Files%20and%20Maps
+Then build project at any time by running `build_module.sh`
 
-Sample_Captain_Coop.txt is the config file, replace your existing one in the dedicated server directory.
+## Systemd setup ##
 
-Sample_Captain_Coop_start.bat is a startup file, place this in the main directory.
-  
-You can remove these flags if you want, they set the CPU to use etc as well as priority for program. /affinity 20 /abovenormal 
-
-
-WFAS Custom Maps.zip can be extracted into your C:\Mount&Blade With Fire and Sword Dedicated\Modules\Ogniem i Mieczem\SceneObj directory. Make sure you backup existing sceneobjs. To use these custom maps, add them to rotation via Sample_Captain_Coop.txt (should be there by default)
-
-Finally, to build my custom module system to your dedicated server files, you need to download Python. I use Python 2.7.6 https://www.python.org/downloads/release/python-276/
-
-Install it and in windows, Edit Path variable "Path" and add C:\Python27;  Follow instructions here if you're not sure: https://forums.taleworlds.com/index.php?threads/guide-editing-and-building-the-module-system.264025/
-
-These instructions are all you need to mod. The bread and butter is the last part but here is for my server:
-
-Set up your module directory and build to it:
-In the module system directory, open module_info.py and change the export dir variable to be the path of your module directory, using forward slashes (/) to separate directories rather than back slashes (\). For example, you might set it to this:
-export_dir = "C:/Mount&Blade With Fire and Sword Dedicated/Modules/Ogniem i Mieczem/"
-Double click build_module.bat in the module system directory.
-
-
-So quick recap:
-Download official WFAS dedicated server files and extract somewhere
-Download and install Python, I use 2.7.6, setup windows path variable
-Download my custom module here, extract in a separate directory, configure the module_info.py to your dedicated server files "Ogniem i Mieczem" directory. Run build_module.bat
-Download WFAS Custom Maps.zip and extract into C:\Mount&Blade With Fire and Sword Dedicated\Modules\Ogniem i Mieczem\SceneObj
-Place sample Sample_Captain_Coop.txt and Sample_Captain_Coop_start.bat in main dedicated server files directory. Configure Sample_Captain_Coop.txt and run the Sample_Captain_Coop_start.bat
+You can start a server as daemon, follow [instructions](https://github.com/kanlas-net/MB_Systemd).
 
 </details>
+
+# More info #
+For more info check original mod [readme](https://github.com/Daimyo21/Mount-Blade-WFAS-Dynamic-Squads-CaptainCoop-Server-Side-Mod/blob/master/Readme.txt)
