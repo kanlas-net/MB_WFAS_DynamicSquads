@@ -3,18 +3,18 @@
 <details>
   <summary>Open guide</summary>
 
-Download latest from Docker Hub:
+## Download latest from Docker Hub ##
 ```
 docker pull kanlas/mb-wfas-dynamicsquads
 ```
 
-Or build by yourself:
+## Or build by yourself ##
 ```
 wget https://raw.githubusercontent.com/kanlas-net/MB_WFAS_DynamicSquads/master/Docker/Dockerfile
 docker build --tag dynamicsquads .
 ```
 
-To start:
+## Start container ##
 ```
 chown 5885:5885 /path/to/logs/folder; chmod 770 /path/to/logs/folder
 docker run -itd \
