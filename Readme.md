@@ -14,10 +14,9 @@ Then build project at any time by running `build_module.sh`
 
 # Docker #
 
-Download latest and import:
+Download latest from Docker Hub:
 ```
-wget https://github.com/kanlas-net/MB_WFAS_DynamicSquads/releases/latest/download/DynamicSquads-container.tar
-docker load -i DynamicSquads-container.tar
+docker pull kanlas/mb-wfas-dynamicsquads
 ```
 
 Or build by yourself:
